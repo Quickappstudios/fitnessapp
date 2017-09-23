@@ -1,3 +1,5 @@
+import { GymsitePage } from './../pages/gymsite/gymsite';
+import { HealthtipsPage } from './../pages/healthtips/healthtips';
 import { YoutubePipe } from './../pipes/youtube/youtube';
 import { VideoPage } from './../pages/video/video';
 
@@ -8,7 +10,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,6 +26,9 @@ import { FIREBASE_CONFIG } from './../app.firebase.config';
 //Pages
 import { WalkthroughPage } from './../pages/walkthrough/walkthrough';
 
+import {InAppBrowser} from '@ionic-native/in-app-browser';
+import { NetworkServiceProvider } from '../providers/network-service/network-service';
+
 
 
 //Import Firebase
@@ -32,10 +37,11 @@ import { WalkthroughPage } from './../pages/walkthrough/walkthrough';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
-    WalkthroughPage,
+     WalkthroughPage,
     VideoPage,
-    YoutubePipe
+    YoutubePipe,
+    HealthtipsPage,
+    GymsitePage
   ],
   imports: [
     BrowserModule,
@@ -46,14 +52,17 @@ import { WalkthroughPage } from './../pages/walkthrough/walkthrough';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     WalkthroughPage,
-    VideoPage
+    VideoPage,
+    HealthtipsPage,
+    GymsitePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    NetworkServiceProvider,
   
   ]
 })

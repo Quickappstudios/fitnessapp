@@ -11,7 +11,14 @@
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>
-    </ion-list>
+
+
+      <!--static buttons-->
+
+      <button menuClose ion-item (click)="openwebpage()">
+          Visit Our Website
+        </button>
+</ion-list>
   </ion-content>
 
 </ion-menu>

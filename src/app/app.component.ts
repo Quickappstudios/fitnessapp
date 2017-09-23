@@ -66,7 +66,7 @@ export class MyApp {
 //app pages we see when logged in
 appPages: PageInterface[] = [
   { title: 'Home', name: 'HomePage', component: HomePage, index: 0, icon: 'home' },
-  { title: 'Health Tips', name: 'Health Tips', component: HealthtipsPage, index: 0, icon: 'home' },
+  { title: 'Health Tips', name: 'Health Tips', component: HealthtipsPage, index: 0, icon: 'medkit' },
 
 ];
 
@@ -187,7 +187,7 @@ presentToast() {
   let toast = this.toastCtrl.create({
     message: 'You have Logged Out Successfully',
     duration: 3000,
-    position: 'top'
+    position: 'bottom'
   });
 
   toast.onDidDismiss(() => {

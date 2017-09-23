@@ -76,10 +76,27 @@ signIn() {
     this.navCtrl.setRoot(HomePage, this.provider);
   })
 
-  //if we have an errot
+  //if we have an error
   .catch( error => {
     console.log('got error',error);
     this.showAlert(error.message);
+  });
+}
+
+
+
+//Loginwithgoogle
+
+loginWithGoogle() {
+  this.fire.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
+  .then( res => {
+    this.provider.loggedin = true;
+    this.provider.name = res.user.displayName;
+    this.provider.email = res.user.email;
+    this.provider.profilePicture = res.user.photoURL;
+    console.log('from Google',res);
+    this.showAlert('Success! you\'re logged in by Google');
+    this.navCtrl.setRoot(HomePage, this.provider);
   });
 }
 

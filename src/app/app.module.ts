@@ -1,3 +1,4 @@
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 
 
@@ -45,6 +46,8 @@ import {InAppBrowser} from '@ionic-native/in-app-browser';
 
 
 
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -62,6 +65,7 @@ import {InAppBrowser} from '@ionic-native/in-app-browser';
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     HttpModule,
+ 
    
   ],
   bootstrap: [IonicApp],
@@ -81,7 +85,8 @@ import {InAppBrowser} from '@ionic-native/in-app-browser';
     InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     NetworkServiceProvider,
-    AngularFireAuth
+    AngularFireAuth,
+    SocialSharing
   
   ]
 })

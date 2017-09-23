@@ -1,8 +1,5 @@
 <!--
-  Generated template for the HealthtipsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
+  Health Tips get data from Firebase
 -->
 <ion-header>
 
@@ -13,67 +10,53 @@
 </ion-header>
 
 
-<ion-content >
-
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <img class="fitness-tips" src="http://img2.thejournal.ie/article/2549417/river?version=2549490&width=1340"/>
-      </ion-col>
-    </ion-row>
+<!-- do refresh the posts array-->
+<ion-content padding>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="bubbles" refreshingText="Refreshing...">
+      </ion-refresher-content>
+    </ion-refresher>
 
 
 
-    <!--share Section-->
-    <ion-row>
-      <ion-col>
-          <!-- <button ion-button icon-only> Share:  <ion-icon ios="ios-share" md="md-share"></ion-icon></ion-button> -->
-
-            <div class="share-content">
-           Share:<ion-icon ios="md-share" md="md-share"></ion-icon>
-          </div>
-
-            
-        <hr class="red">
-      </ion-col>
-</ion-row>
-
-
-
-
-<!--strengthen your core-->
-<ion-row>
-    <ion-col>
-      <div class="health-heading">
-        <h2 text-center>Strengthen Your Core</h2>
-      </div>
-        <hr>
-      </ion-col>
-
+    <!-- Cards containing quotes -->
+    <ion-card *ngFor="let quote of quotes; let i = index;">
+      <!-- Quote aurthor -->
+      <ion-card-header>
+        {{quote.title}}
+      </ion-card-header>
+      <!-- Quote Title -->
+      <ion-card-content [innerHtml]=quote.content></ion-card-content>
+  
       
-       <div class="health-content">
       
-          <p>Dont be afraid of situps. We've changed our tune on these and heres why.
-            Situps increase your range of motion,which makes your abdominals work harder and longer.
-          </p>
-
-          <p>Dont be afraid of situps. We've changed our tune on these and heres why.
-              Situps increase your range of motion,which makes your abdominals work harder and longer.
-            </p>
-
-
-            <p>Dont be afraid of situps. We've changed our tune on these and heres why.
-                Situps increase your range of motion,which makes your abdominals work harder and longer.
-              </p>
-
-            </div>
-            
-
-      </ion-row>
-
-
-
-    
-  </ion-grid>
-
-</ion-content>
+      
+      
+      <!-- Sharing Icons -->
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <button ion-button icon-only (click)="regularShare(i)" color="primary" clear>
+          <ion-icon class="share-icon" name="share"></ion-icon>
+        </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-only (click)="whatsappShare(i)" color="primary" clear>
+          <ion-icon class="share-icon" name="logo-whatsapp"></ion-icon>
+        </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-only (click)="facebookShare(i)" color="primary" clear>
+          <ion-icon  class="share-icon" name="logo-facebook"></ion-icon>
+        </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-only (click)="twitterShare(i)" color="primary" clear>
+          <ion-icon class="share-icon" name="logo-twitter"></ion-icon>
+        </button>
+          </ion-col>
+  
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </ion-content>

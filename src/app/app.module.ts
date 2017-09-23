@@ -1,3 +1,5 @@
+import { YoutubePipe } from './../pipes/youtube/youtube';
+import { VideoPage } from './../pages/video/video';
 
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -23,6 +25,7 @@ import { FIREBASE_CONFIG } from './../app.firebase.config';
 import { WalkthroughPage } from './../pages/walkthrough/walkthrough';
 
 
+
 //Import Firebase
 
 @NgModule({
@@ -30,7 +33,9 @@ import { WalkthroughPage } from './../pages/walkthrough/walkthrough';
     MyApp,
     HomePage,
     ListPage,
-    WalkthroughPage
+    WalkthroughPage,
+    VideoPage,
+    YoutubePipe
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,8 @@ import { WalkthroughPage } from './../pages/walkthrough/walkthrough';
     MyApp,
     HomePage,
     ListPage,
-    WalkthroughPage
+    WalkthroughPage,
+    VideoPage
   ],
   providers: [
     StatusBar,

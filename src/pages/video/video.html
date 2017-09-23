@@ -1,0 +1,70 @@
+<!--
+  VIDEO PAGE
+-->
+<ion-header>
+    
+      <ion-navbar color="primary">
+        <ion-title>Fitness Videos</ion-title>
+      </ion-navbar>
+    
+    </ion-header>
+    
+    
+    <ion-content fullscreen >
+      <ion-card>
+        <ion-card-content>
+    <!--Main Feature Video-->
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Ea6o73uwVYM" frameborder="0" allowfullscreen></iframe>
+    
+    </ion-card-content>
+    </ion-card>
+      <ion-grid>
+    <ion-row>
+    
+    
+    <!-- More Fitness Video row-->
+    <ion-col sm-12 class="video-content padding">
+    <h3>More Fitness Videos</h3>
+    <h4>Showcase your Videos Here</h4>
+    
+    </ion-col>
+    
+    </ion-row>
+    
+    
+    <!--two col-->
+    
+    <ion-row >
+      <ion-col col-12 col-sm>
+    
+    
+    
+          <ion-card *ngFor="let v of video">
+              
+             <ion-card-header>
+                 {{v.title}}
+              </ion-card-header>
+           <!-- get the Video-->
+           <ion-card-content>
+              <iframe width="100%" height="100%" [src]="v.videos | youtube" frameborder="0" allowfullscreen></iframe>
+           
+           
+           </ion-card-content>
+           
+            </ion-card>
+         
+    
+        </ion-col>
+    </ion-row>
+    
+    
+    <!--two col-->
+    
+    
+    
+    
+    
+    
+      </ion-grid>
+    
+    </ion-content>

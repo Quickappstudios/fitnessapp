@@ -1,0 +1,54 @@
+/*Image Banner*/
+.banner-image{
+    background:url('/assets/images/fitness_banner.jpg') no-repeat;
+    height:200px;
+    background-size:contain;
+    padding:0;
+    margin:0;
+    
+}
+
+
+
+/*Slider Menu*/
+
+/*background color of menu*/
+
+
+
+/*Menu background*/
+.mymenu {
+    background-color:#ED6969;
+  }
+  
+ 
+  
+  ///List is transparent
+  .mymenu .list {
+    background-color: transparent;
+    margin-top:-25px;
+  }
+  
+  /*side menu list items*/
+  .mymenu .item, .mymenu .item-content, .mymenu .item-complex{
+    background-color: transparent!important;
+    color: #FFFFFF;
+    border-color: rgba(0,0,0,0);
+    font-size:20px!important;
+  }
+
+  /*Icon styles*/
+
+     /*Side menu icons*/
+// ion-icon {
+//     display: inline-block;
+//     font-size: 1.5em!important;
+//     padding-right:5px;
+//     color:white!important;
+// }
+
+
+.button-ios {
+background:transparent!important;
+font-size:1.7em;
+}

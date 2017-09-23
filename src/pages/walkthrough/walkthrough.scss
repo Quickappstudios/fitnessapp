@@ -1,0 +1,91 @@
+page-walkthrough {
+font-weight: 300;
+        
+        ion-slide {
+                position: relative;
+                background-repeat:cover;
+                background-position:center center;
+                background-color:black;
+             
+        
+        /*Icons*/
+        
+        ion-icon{
+        
+            font-size:5.0em;
+            color:white;
+            font-weight:900;
+            position:absolute;
+            top:0;
+            left:0;
+           padding-top:40%;
+           padding-left:35%;
+        }
+               
+                    
+             /*Walkthrough Title always use 100% with absolute position*/
+             h2{
+                            width:100%;
+                            color:white;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                             padding-top:70%;
+                             display:block;
+                             margin:0 auto!important;
+                            font-size:1.8em;
+                            text-align:center;
+                         }
+                  
+                  
+                         /*Paragraph slider*/
+                    p {
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      right: 0;
+                      background-color: rgba(240, 123, 108, 0.8);
+                      color: #FFFFFF;
+                      padding: 28px 28px 48px 28px;
+                      font-size: 2.7rem;
+                      margin-bottom: 0;
+                    }
+        
+        
+                   
+        
+        
+                   
+                    
+                
+        
+                    /*Image Size Logo*/
+                    img {
+                      width: 50px;
+                      height: 50px;
+                      margin-top: -150px;
+                   
+                    }
+                
+                  }
+        
+        
+            
+        
+             
+              /*Fitness Button*/
+              button.fitness-button{
+                  margin-top:15px;
+                  margin-bottom:15px;
+                  font-size:18px;
+                  font-weight:bold;
+              }
+        
+              /*Swiper Bullet*/
+            .swiper-pagination-bullet {
+                background: white;
+              }
+        
+        }
+
+

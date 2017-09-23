@@ -1,7 +1,6 @@
-import { GymsitePage } from './../pages/gymsite/gymsite';
-import { HealthtipsPage } from './../pages/healthtips/healthtips';
-import { YoutubePipe } from './../pipes/youtube/youtube';
-import { VideoPage } from './../pages/video/video';
+
+
+
 
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,29 +8,42 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+
 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 //import Angularfire
-
 import{AngularFireModule} from 'angularfire2';
+import {FIREBASE_CONFIG } from './../app.firebase.config';
 
-
-import { FIREBASE_CONFIG } from './../app.firebase.config';
+//import Login auth
+import { AngularFireAuth } from 'angularfire2/auth';
 
 
 //Pages
 import { WalkthroughPage } from './../pages/walkthrough/walkthrough';
+import { GymsitePage } from './../pages/gymsite/gymsite';
+import { HealthtipsPage } from './../pages/healthtips/healthtips';
+import { YoutubePipe } from './../pipes/youtube/youtube';
+import { VideoPage } from './../pages/video/video';
+import { HomePage } from '../pages/home/home';
 
+//Pages Auth
+
+import { LoginPage } from './../pages/login/login';
+import { RegisterPage } from './../pages/register/register';
+
+
+//import Network service
+import { NetworkServiceProvider } from './../providers/network-service/network-service';
+import { HttpModule, JsonpModule } from '@angular/http';
 import {InAppBrowser} from '@ionic-native/in-app-browser';
-import { NetworkServiceProvider } from '../providers/network-service/network-service';
 
 
 
-//Import Firebase
+
 
 @NgModule({
   declarations: [
@@ -41,12 +53,16 @@ import { NetworkServiceProvider } from '../providers/network-service/network-ser
     VideoPage,
     YoutubePipe,
     HealthtipsPage,
-    GymsitePage
+    GymsitePage,
+    LoginPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    HttpModule,
+   
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -55,7 +71,9 @@ import { NetworkServiceProvider } from '../providers/network-service/network-ser
     WalkthroughPage,
     VideoPage,
     HealthtipsPage,
-    GymsitePage
+    GymsitePage,
+    LoginPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,
@@ -63,6 +81,7 @@ import { NetworkServiceProvider } from '../providers/network-service/network-ser
     InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     NetworkServiceProvider,
+    AngularFireAuth
   
   ]
 })

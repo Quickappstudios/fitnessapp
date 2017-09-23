@@ -1,51 +1,116 @@
-import { GymsitePage } from './../pages/gymsite/gymsite';
-import { HealthtipsPage } from './../pages/healthtips/healthtips';
-
 
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform,MenuController  } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+
+
+
 import { HomePage } from '../pages/home/home';
-
 import { WalkthroughPage } from './../pages/walkthrough/walkthrough';
-
 import { VideoPage } from './../pages/video/video';
+import { GymsitePage } from './../pages/gymsite/gymsite';
+import { HealthtipsPage } from './../pages/healthtips/healthtips';
+
+//import Loginpage
+import { LoginPage } from './../pages/login/login';
 
 import{InAppBrowser,InAppBrowserOptions} from "@ionic-native/in-app-browser";
 
 //loading controller
-import{LoadingController} from 'ionic-angular';
+import{LoadingController,ToastController} from 'ionic-angular';
+
+//import AngularfireAuth
+
+import { AngularFireAuth } from 'angularfire2/auth';
+
+//ToastController
+
+
+
+// Interface of app pages';
+
+
+export interface PageInterface {
+  title: string;
+  name: string;
+  component: any;
+  icon: string;
+  logsOut?: boolean;
+  index?: number;
+  tabName?: string;
+  tabComponent?: any;
+}
+
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
 
+
+  provider = {
+    loggedin: false,
+    name: '',
+    email: '',
+    profilePicture: ''
+  }
+
   url:string;
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = WalkthroughPage;
 
-  pages: Array<{title: string, component: any}>;
+//Array Of Pages to Show
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,private inAppBrowser:InAppBrowser,public loadCtrl:LoadingController) {
+//app pages we see when logged in
+appPages: PageInterface[] = [
+  { title: 'Home', name: 'HomePage', component: HomePage, index: 0, icon: 'home' },
+  { title: 'Health Tips', name: 'Health Tips', component: HealthtipsPage, index: 0, icon: 'home' },
+
+];
+
+//logged in Pages we show
+loggedInPages: PageInterface[] = [
+  
+  { title: 'Logout', name: 'HomePage', component: HomePage, icon: 'log-out', logsOut: true }
+];
+
+//logged out Pages we can show
+loggedOutPages: PageInterface[] = [
+
+  { title: 'Logout', name: 'HomePage', component: HomePage, icon: 'log-out', logsOut: true }
+  
+];
+
+
+
+
+
+
+
+  rootPage: any = LoginPage;
+
+  
+
+  constructor(public platform: Platform, 
+    public statusBar: StatusBar, 
+    public splashScreen: SplashScreen,
+    private inAppBrowser:InAppBrowser,
+    public loadCtrl:LoadingController,
+    private fire: AngularFireAuth,
+    public toastCtrl:ToastController,
+    public menuCtrl:MenuController
+ 
+    ) {
     this.initializeApp();
 
-    
-    
-    
-    
-    // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Video', component: VideoPage },
-      { title: 'Health Tips', component: HealthtipsPage }
-      
-    ];
 
-  }
+    
+
+
+
+}
 
   initializeApp() {
     this.platform.ready().then(() => {
@@ -55,6 +120,9 @@ export class MyApp {
       this.splashScreen.hide();
     });
   }
+
+
+  //push to the component pages
 
   openPage(page) {
     // Reset the content nav to have just this page
@@ -112,5 +180,40 @@ catch(e){
     }, 3000);
   }
 
+
+
+//Toast Controller
+presentToast() {
+  let toast = this.toastCtrl.create({
+    message: 'You have Logged Out Successfully',
+    duration: 3000,
+    position: 'top'
+  });
+
+  toast.onDidDismiss(() => {
+    console.log('Dismissed toast');
+  });
+
+  toast.present();
+}
+
+
+
+
+  //Logout with firebase
+
+  logout() {
+    this.fire.auth.signOut();  
+    this.provider.loggedin = false;
+    this.nav.setRoot(LoginPage);
+
+    this.presentToast();
+  }
+
+
+  enableAuthenticatedMenu() {
+    // this.menuCtrl.enable(true, 'authenticated');
+    this.menuCtrl.enable(false, 'unauthenticated');
+  }
 
 }

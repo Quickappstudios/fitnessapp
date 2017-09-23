@@ -1,4 +1,4 @@
-<ion-menu [content]="content">
+<ion-menu id="authenticated" side="left" [content]="content">
   <ion-header>
    
   </ion-header>
@@ -8,9 +8,16 @@
   <ion-content class="mymenu">
       <div class="banner-image"></div>
     <ion-list no-lines>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      
+      
+      <button menuClose ion-item *ngFor="let p of appPages" (click)="openPage(p)">
+
+        <!--display icons dynamically-->
+          <ion-icon item-start [name]="p.icon"></ion-icon>
         {{p.title}}
       </button>
+
+
 
 
       <!--static buttons-->
@@ -18,6 +25,10 @@
       <button menuClose ion-item (click)="openwebpage()">
           Visit Our Website
         </button>
+
+        <button menuClose ion-item (click)="logout()">
+         Log Out
+          </button>
 </ion-list>
   </ion-content>
 

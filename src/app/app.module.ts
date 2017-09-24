@@ -1,3 +1,5 @@
+
+import { ClassesPage } from './../pages/classes/classes';
 import { SocialSharing } from '@ionic-native/social-sharing';
 
 
@@ -30,6 +32,8 @@ import { HealthtipsPage } from './../pages/healthtips/healthtips';
 import { YoutubePipe } from './../pipes/youtube/youtube';
 import { VideoPage } from './../pages/video/video';
 import { HomePage } from '../pages/home/home';
+import { ClassDetailsPage } from './../pages/class-details/class-details';
+
 
 //Pages Auth
 
@@ -58,7 +62,9 @@ import {InAppBrowser} from '@ionic-native/in-app-browser';
     HealthtipsPage,
     GymsitePage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    ClassesPage,
+    ClassDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -77,7 +83,9 @@ import {InAppBrowser} from '@ionic-native/in-app-browser';
     HealthtipsPage,
     GymsitePage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    ClassesPage,
+    ClassDetailsPage
   ],
   providers: [
     StatusBar,

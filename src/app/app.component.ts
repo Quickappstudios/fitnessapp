@@ -1,4 +1,5 @@
 
+
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform,MenuController  } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -12,6 +13,7 @@ import { WalkthroughPage } from './../pages/walkthrough/walkthrough';
 import { VideoPage } from './../pages/video/video';
 import { GymsitePage } from './../pages/gymsite/gymsite';
 import { HealthtipsPage } from './../pages/healthtips/healthtips';
+import { ClassesPage } from './../pages/classes/classes';
 
 //import Loginpage
 import { LoginPage } from './../pages/login/login';
@@ -67,6 +69,7 @@ export class MyApp {
 appPages: PageInterface[] = [
   { title: 'Home', name: 'HomePage', component: HomePage, index: 0, icon: 'home' },
   { title: 'Health Tips', name: 'Health Tips', component: HealthtipsPage, index: 0, icon: 'medkit' },
+  { title: 'Classes', name: 'Classes', component: ClassesPage, index: 0, icon: 'medkit' }
 
 ];
 
@@ -88,8 +91,8 @@ loggedOutPages: PageInterface[] = [
 
 
 
-
-  rootPage: any = LoginPage;
+//Main RootPage
+  rootPage: any = ClassesPage;
 
   
 

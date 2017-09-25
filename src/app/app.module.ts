@@ -1,3 +1,4 @@
+import { AboutPage } from './../pages/about/about';
 import { SocialPage } from './../pages/social/social';
 import { CouponsPage } from './../pages/coupons/coupons';
 import { EventsPage } from './../pages/events/events';
@@ -86,7 +87,8 @@ import { NgCalendarModule  } from 'ionic2-calendar';
     StorePage,
     EventsPage,
     CouponsPage,
-    SocialPage
+    SocialPage,
+    AboutPage
   ],
   imports: [
     BrowserModule,
@@ -115,7 +117,8 @@ import { NgCalendarModule  } from 'ionic2-calendar';
     StorePage,
     EventsPage,
     CouponsPage,
-    SocialPage
+    SocialPage,
+    AboutPage
   ],
   providers: [
     StatusBar,

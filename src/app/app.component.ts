@@ -1,3 +1,4 @@
+import { AboutPage } from './../pages/about/about';
 import { SocialPage } from './../pages/social/social';
 import { CouponsPage } from './../pages/coupons/coupons';
 
@@ -75,7 +76,9 @@ export class MyApp {
 //app pages we see when logged in
 appPages: PageInterface[] = [
   { title: 'Home', name: 'HomePage', component: HomePage, index: 0, icon: 'home' },
+  { title: 'About', name: 'About', component:AboutPage, index: 0, icon: 'person' },
   { title: 'Health Tips', name: 'Health Tips', component: HealthtipsPage, index: 0, icon: 'medkit' },
+
   { title: 'Classes', name: 'Classes', component: ClassesPage, index: 0, icon: 'medkit' },
   { title: 'Videos', name: 'Videos', component: VideoPage, index: 0, icon: 'videocam-outline' },
   { title: 'Staff', name: 'Staff', component:StaffPage, index: 0, icon: 'person' },
@@ -84,6 +87,7 @@ appPages: PageInterface[] = [
   { title: 'Events', name: 'Events', component:EventsPage, index: 0, icon: 'ios-calendar-outline' },
   { title: 'Coupons', name: 'Coupons', component:CouponsPage, index: 0, icon: 'ios-calendar-outline' },
   { title: 'Social', name: 'Social', component:SocialPage, index: 0, icon: 'ios-calendar-outline' }
+ 
 ];
 
 
@@ -107,7 +111,7 @@ loggedOutPages: PageInterface[] = [
 
 
 //Main RootPage
-  rootPage: any = SocialPage;
+  rootPage: any = HomePage;
 
   
 

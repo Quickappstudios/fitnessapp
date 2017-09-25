@@ -6,11 +6,15 @@
 
   
   <ion-content class="mymenu">
-      <div class="banner-image"></div>
+    <!--banner image-->
+      
+    <div class="banner-image"></div>
+   
+   
+   
+   
     <ion-list no-lines>
-      
-      
-      <button menuClose ion-item *ngFor="let p of appPages" (click)="openPage(p)">
+      <button class="btn-trans" menuClose ion-item *ngFor="let p of appPages" (click)="openPage(p)">
 
         <!--display icons dynamically-->
           <ion-icon item-start [name]="p.icon"></ion-icon>

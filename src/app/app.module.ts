@@ -1,5 +1,6 @@
+import { EventsPage } from './../pages/events/events';
+import { StorePage } from './../pages/store/store';
 
-import { ClassesPage } from './../pages/classes/classes';
 import { SocialSharing } from '@ionic-native/social-sharing';
 
 
@@ -25,14 +26,22 @@ import {FIREBASE_CONFIG } from './../app.firebase.config';
 import { AngularFireAuth } from 'angularfire2/auth';
 
 
+//Directives
+import { YoutubePipe } from './../pipes/youtube/youtube';
+
+
 //Pages
 import { WalkthroughPage } from './../pages/walkthrough/walkthrough';
 import { GymsitePage } from './../pages/gymsite/gymsite';
 import { HealthtipsPage } from './../pages/healthtips/healthtips';
-import { YoutubePipe } from './../pipes/youtube/youtube';
+
 import { VideoPage } from './../pages/video/video';
 import { HomePage } from '../pages/home/home';
 import { ClassDetailsPage } from './../pages/class-details/class-details';
+import { GalleryPage } from './../pages/gallery/gallery';
+import { StaffPage } from './../pages/staff/staff';
+
+import { ClassesPage } from './../pages/classes/classes';
 
 
 //Pages Auth
@@ -47,7 +56,8 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import {InAppBrowser} from '@ionic-native/in-app-browser';
 
 
-
+//Image Gallery
+import { IonicImageViewerModule } from 'ionic-img-viewer';
 
 
 
@@ -64,13 +74,18 @@ import {InAppBrowser} from '@ionic-native/in-app-browser';
     LoginPage,
     RegisterPage,
     ClassesPage,
-    ClassDetailsPage
+    ClassDetailsPage,
+    StaffPage,
+    GalleryPage,
+    StorePage,
+    EventsPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     HttpModule,
+    IonicImageViewerModule
  
    
   ],
@@ -85,7 +100,11 @@ import {InAppBrowser} from '@ionic-native/in-app-browser';
     LoginPage,
     RegisterPage,
     ClassesPage,
-    ClassDetailsPage
+    ClassDetailsPage,
+    StaffPage,
+    GalleryPage,
+    StorePage,
+    EventsPage
   ],
   providers: [
     StatusBar,

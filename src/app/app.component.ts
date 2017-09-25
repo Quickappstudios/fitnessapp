@@ -1,3 +1,7 @@
+import { EventsPage } from './../pages/events/events';
+import { StorePage } from './../pages/store/store';
+import { GalleryPage } from './../pages/gallery/gallery';
+import { StaffPage } from './../pages/staff/staff';
 
 
 import { Component, ViewChild } from '@angular/core';
@@ -69,9 +73,16 @@ export class MyApp {
 appPages: PageInterface[] = [
   { title: 'Home', name: 'HomePage', component: HomePage, index: 0, icon: 'home' },
   { title: 'Health Tips', name: 'Health Tips', component: HealthtipsPage, index: 0, icon: 'medkit' },
-  { title: 'Classes', name: 'Classes', component: ClassesPage, index: 0, icon: 'medkit' }
+  { title: 'Classes', name: 'Classes', component: ClassesPage, index: 0, icon: 'medkit' },
+  { title: 'Videos', name: 'Videos', component: VideoPage, index: 0, icon: 'videocam-outline' },
+  { title: 'Staff', name: 'Staff', component:StaffPage, index: 0, icon: 'person' },
+  { title: 'Gallery', name: 'Gallery', component:GalleryPage, index: 0, icon: 'image-outline' },
+  { title: 'Store', name: 'Store', component:StorePage, index: 0, icon: 'cart' },
+  { title: 'Events', name: 'Events', component:EventsPage, index: 0, icon: 'ios-calendar-outline' }
 
 ];
+
+
 
 //logged in Pages we show
 loggedInPages: PageInterface[] = [
@@ -92,7 +103,7 @@ loggedOutPages: PageInterface[] = [
 
 
 //Main RootPage
-  rootPage: any = ClassesPage;
+  rootPage: any = LoginPage;
 
   
 

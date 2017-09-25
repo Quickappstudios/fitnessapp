@@ -105,4 +105,12 @@ register() {
   this.navCtrl.push(RegisterPage);
 }
 
+
+//reset password
+
+    //If the user forgets his/her password
+    resetPassword(email: string): any {
+      return this.fire.auth.sendPasswordResetEmail(this.email.value);
+    }
+
 }

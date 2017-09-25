@@ -1,3 +1,5 @@
+import { SocialPage } from './../pages/social/social';
+import { CouponsPage } from './../pages/coupons/coupons';
 import { EventsPage } from './../pages/events/events';
 import { StorePage } from './../pages/store/store';
 
@@ -59,6 +61,10 @@ import {InAppBrowser} from '@ionic-native/in-app-browser';
 //Image Gallery
 import { IonicImageViewerModule } from 'ionic-img-viewer';
 
+//Events
+
+import { NgCalendarModule  } from 'ionic2-calendar';
+
 
 
 
@@ -78,14 +84,17 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
     StaffPage,
     GalleryPage,
     StorePage,
-    EventsPage
+    EventsPage,
+    CouponsPage,
+    SocialPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     HttpModule,
-    IonicImageViewerModule
+    IonicImageViewerModule,
+    NgCalendarModule,
  
    
   ],
@@ -104,7 +113,9 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
     StaffPage,
     GalleryPage,
     StorePage,
-    EventsPage
+    EventsPage,
+    CouponsPage,
+    SocialPage
   ],
   providers: [
     StatusBar,

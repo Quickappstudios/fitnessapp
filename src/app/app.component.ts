@@ -1,3 +1,6 @@
+import { SocialPage } from './../pages/social/social';
+import { CouponsPage } from './../pages/coupons/coupons';
+
 import { EventsPage } from './../pages/events/events';
 import { StorePage } from './../pages/store/store';
 import { GalleryPage } from './../pages/gallery/gallery';
@@ -21,7 +24,7 @@ import { ClassesPage } from './../pages/classes/classes';
 
 //import Loginpage
 import { LoginPage } from './../pages/login/login';
-
+//In App Browser
 import{InAppBrowser,InAppBrowserOptions} from "@ionic-native/in-app-browser";
 
 //loading controller
@@ -78,8 +81,9 @@ appPages: PageInterface[] = [
   { title: 'Staff', name: 'Staff', component:StaffPage, index: 0, icon: 'person' },
   { title: 'Gallery', name: 'Gallery', component:GalleryPage, index: 0, icon: 'image-outline' },
   { title: 'Store', name: 'Store', component:StorePage, index: 0, icon: 'cart' },
-  { title: 'Events', name: 'Events', component:EventsPage, index: 0, icon: 'ios-calendar-outline' }
-
+  { title: 'Events', name: 'Events', component:EventsPage, index: 0, icon: 'ios-calendar-outline' },
+  { title: 'Coupons', name: 'Coupons', component:CouponsPage, index: 0, icon: 'ios-calendar-outline' },
+  { title: 'Social', name: 'Social', component:SocialPage, index: 0, icon: 'ios-calendar-outline' }
 ];
 
 
@@ -103,7 +107,7 @@ loggedOutPages: PageInterface[] = [
 
 
 //Main RootPage
-  rootPage: any = LoginPage;
+  rootPage: any = SocialPage;
 
   
 

@@ -1,0 +1,47 @@
+Skip to content
+This repository
+Search
+Pull requests
+
+ 
+<!--background of login form-->
+<ion-content class="login-content" padding>
+
+<!--app icon-->
+    <ion-row class="logo-row">
+        <ion-col></ion-col>
+        <ion-col width-100>
+          <img src="assets/images/logo.png"/>
+        </ion-col>
+        
+        <ion-col></ion-col>
+      </ion-row>
+
+
+<!--Login Box-->
+    <div class="login-box">
+ <!--Input Fields-->
+          <ion-list>
+            <ion-item>
+              <ion-label floating>Email</ion-label>
+              <ion-input type="text" #email></ion-input>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label floating>Password</ion-label>
+              <ion-input type="password" #password></ion-input>
+            </ion-item>
+            
+          </ion-list>
+
+          <ion-row>
+            <ion-col class="signup-col">
+              <button ion-button class="submit-btn" (click)="signIn()">Login</button>
+              <button ion-button class="submit-btn" (click)="register()">Register</button>
+            </ion-col>
+          </ion-row>
+        </div>
+
+        <p class="forgot-title">Forgot Password?</p>
+</ion-content>
+

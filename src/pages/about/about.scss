@@ -1,0 +1,50 @@
+page-about {
+
+    
+        
+        /*Card*/
+            ion-card{
+                border-bottom:3px solid red;
+            }
+        
+          /*Icon of about Page*/
+            ion-icon.about-icon{
+                padding-top:20px;
+                text-align:center;
+                display:block;
+                margin:auto;
+                font-size:4.0em;
+                width: 100px;
+                height: 100px;
+                background: red;
+                -moz-border-radius: 50px;
+                -webkit-border-radius: 50px;
+                border-radius: 50px;
+                border:1px solid black;
+                color:white;
+                margin-bottom:15px;
+            }
+        
+            .about-bg{
+             background-color: #494784;
+            }
+            
+            
+            h2.about-title {
+                color: orange;
+                font-family: 'Montserrat', sans-serif;
+                text-align:center;
+                font-size:1.6em;
+            }
+        
+            ion-card-content.about-content p{
+             font-size:17px;
+             color:black!important;
+             font-family: 'Montserrat', sans-serif;
+            }
+        
+          
+        
+        }
+
+

@@ -1,0 +1,59 @@
+page-login {
+
+    /*Background of login*/
+    .login-content {
+      background: #494784;
+   
+
+
+      //Login Box-//
+      .login-box {
+        background: #5B5996;
+        padding: 40px 20px 0px 20px;
+        margin-top: 30px;
+      }
+   
+      ion-row {
+         align-items: center;
+         text-align: center;
+       }
+   
+
+
+       //input Fields//
+       ion-item {
+           border-radius: 30px !important;
+           padding-left: 30px !important;
+           font-size: 0.9em;
+           margin-bottom: 10px;
+           border: 1px solid #ffffff;
+           border-bottom: 0px !important;
+           box-shadow: none !important;
+       }
+   
+       .signup-col {
+         margin: 0px 16px 0px 16px;
+         padding-bottom: 20px;
+       }
+   
+       .item-inner {
+         border-bottom-color: #ffffff !important;
+         box-shadow: none !important;
+       }
+   
+
+       /*Login and Register Button*/
+       .submit-btn {
+         background: #2DE5FC;
+         
+       
+       }
+
+      /*Forgot Password*/
+       p.forgot-title{
+           color:white;
+           text-align:center;
+           font-size:16px;
+       }
+    }
+  }

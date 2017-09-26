@@ -1,0 +1,45 @@
+<ion-menu id="authenticated" side="left" [content]="content">
+  <ion-header>
+   
+  </ion-header>
+
+
+  
+  <ion-content class="mymenu">
+    <!--banner image-->
+      <div class="logo-container">
+    <div class="banner-image"></div>
+  </div>
+   
+   
+   
+    <ion-list no-lines>
+      <button class="btn-trans" menuClose ion-item *ngFor="let p of appPages" (click)="openPage(p)">
+
+        <!--display icons dynamically-->
+          <ion-icon item-start [name]="p.icon"></ion-icon>
+        {{p.title}}
+      </button>
+
+
+
+
+      <!--static buttons-->
+
+      <button menuClose ion-item   (click)="openwebpage()">
+          <ion-icon item-start name="home"></ion-icon>Visit Our Website
+        </button>
+
+
+
+        <button menuClose ion-item (click)="logout()">
+            <ion-icon item-start name="log-out"></ion-icon> 
+         Log Out
+          </button>
+</ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

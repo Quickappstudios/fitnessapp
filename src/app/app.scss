@@ -1,0 +1,108 @@
+/*Primary Classes*/
+h3{
+  font-family: 'Rancho', cursive!important;
+  font-size:30px;
+  padding-left:20px!important;
+}
+
+h4{
+  font-family: 'Rancho', cursive!important;
+  font-size:18px!important;
+  margin-top:0px;
+  padding-left:20px!important;
+}
+
+
+/*mainbg*/
+.mainbg{
+  background: #494784;
+  }
+
+
+.logo-container{
+  background-color:white;
+  height:100px;
+  margin-bottom:30px;
+  padding-top:15px;
+}
+
+
+/*Image Banner*/
+.banner-image{
+    background:url('/assets/images/logo.png') no-repeat;
+    width:40%;
+    height:150px;
+    background-size:contain;
+    padding:0;
+    margin:0;
+    display:block;
+    margin:auto;
+  
+    
+}
+
+
+
+/*Slider Menu*/
+
+/*background color of menu*/
+
+
+
+/*Menu background*/
+.mymenu {
+    background-color:#494784;
+    
+  }
+
+  
+
+
+
+  //Brand Logo//
+  img.img-logo{
+    
+        width:70px;
+        height:50px;
+        display:block;
+        margin:auto;
+        margin-top:-50px;
+    }
+  
+ 
+  
+  ///List is transparent
+  .mymenu .list {
+    background-color: transparent;
+    margin-top:-25px;
+    font-family: 'Rancho', cursive;
+  }
+  
+  /*side menu list items*/
+  .mymenu .item, .mymenu .item-content, .mymenu .item-complex{
+    background-color: transparent!important;
+    color: #fff;
+    border-color: rgba(0,0,0,0);
+    font-size:24px!important;
+  }
+
+/*Menu Button transparent*/
+  button.button-menutoggle.button-menutoggle-ios {
+    background-color: transparent;
+    font-size:2.0em;
+}
+  /*Icon styles*/
+
+     /*Side menu icons*/
+// ion-icon {
+//     display: inline-block;
+//     font-size: 1.5em!important;
+//     padding-right:5px;
+//     color:white!important;
+// }
+
+
+// .button-ios {
+// background:transparent!important;
+// font-size:1.7em;
+// }

@@ -1,0 +1,57 @@
+page-video {
+
+
+    iframe{
+        height:230px!important
+    }
+
+img.fitness-video{
+    width:100%!important;
+    background-color:black!important;
+    height:100px;
+}
+
+/*Video Content title*/
+.video-content h3{
+color:white!important;
+margin:0;
+padding:0;
+}
+
+.video-content h4{
+    color:white!important;
+    font-size:12px;
+    padding-top:-50px!important;
+    }
+
+
+    /*Video card*/
+
+    ion-card.video.card.card-ios {
+        width: 90%;
+        height: 200px;
+    }
+
+
+    //Horizontal scroll Video Container*/
+
+    .scroll-zoom-wrapper {
+        white-space: nowrap;
+    }
+
+    ion-card {
+        
+    display: inline-block;
+    }
+
+    ion-scroll {
+        min-height: 200px; 
+        height: auto;
+
+    .scroll-content {
+    padding: 0px !important;
+        }    
+    }
+
+
+}

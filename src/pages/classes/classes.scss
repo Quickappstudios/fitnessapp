@@ -1,0 +1,125 @@
+page-classes {
+
+
+
+ion-slide.monday.swiper-slide.swiper-slide-active{
+
+}
+
+/*Fixes swiper overflow problem*/
+.swiper-slide {
+    overflow-y: scroll;
+    display: block;
+}
+
+/*Background color of no class*/
+ion-icon.no-class{
+padding:0!important;
+font-size:5.0em;
+color:white;
+    }
+
+
+ion-slide.class-bg{
+padding:0;
+margin:0;
+background-color:black;
+
+
+}
+
+.class-bg p{
+    color:white!important;
+    padding:20px;
+}
+
+
+
+
+
+
+
+
+/*Class Cards*/
+
+ion-card.class-card{
+    position: relative;
+    text-align: center;
+
+  }
+/*Card title*/
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2em;
+    width: 100%;
+    font-weight: 700;
+    color: #fff;
+}
+
+  /*card Subtitle*/
+  .card-subtitle {
+    font-size: 1em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+}
+
+/*Main swiper Wrapper*/
+ion-slide.swiper-slide.swiper-slide-active {
+    padding-top: 0px;
+    height:100%;
+    
+}
+
+
+
+
+
+
+
+//Main Container of Swiped Tabs*/
+.SwipedTabs-tabs {
+        border-bottom: solid 1px #e6e6e6 !important;
+        height: 80px!important;
+
+    }
+
+    .SwipedTabs-indicatorSegment
+    {
+        -webkit-transition: 0.3s all;
+        -moz-transition:  0.3s all;
+        -o-transition:  0.3s all;
+        transition:  0.3s all;
+        transform-origin: top 0 left 0;
+        height: 1px;
+	    position: relative;
+        top: -2px;
+        
+        /*underline color*/
+	    background-color: blue !important;
+    }
+
+
+    /*Not Active*/
+    .SwipedTabs-tabs ion-segment-button
+    {
+    	border:none !important;
+    	color:green!important;
+    	background-color:white!important;
+    }
+
+
+    /*Active color*/
+     .SwipedTabs-tabs ion-segment-button.SwipedTabs-activeTab
+    {
+        color:blue !important;
+    }
+    .SwipedTabs-tabs
+    {
+    	border-bottom: solid 1px #e6e6e6  !important;
+    }
+}
+
+

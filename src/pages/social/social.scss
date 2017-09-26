@@ -1,0 +1,35 @@
+page-social {
+
+    //facebook Logo
+ion-icon.logo-facebook{
+font-size:2.5em;
+color:#2DE4FC;
+    }
+
+//Twitter Logo
+    ion-icon.logo-twitter{
+        font-size:2.5em;
+        color:#2DE4FC;
+            }
+
+ //Google Logo
+       ion-icon.logo-google{
+        font-size:2.5em;
+        color:#2DE4FC;
+            }
+
+
+            /*List Container*/
+
+button.item.item-block.item-ios {
+    background-color:#69679F!important;
+}
+
+/*List Items color*/
+.item-ios h2 {
+color:white;
+font-family: 'Rancho', cursive;
+font-size:28px;
+}
+
+}

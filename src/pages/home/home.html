@@ -1,0 +1,53 @@
+
+
+<ion-header>
+  
+  <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+
+  <img class="img-logo" src="assets/images/logo.png"/>
+     
+    </ion-header>
+ 
+ 
+ 
+     <!--background of home-->
+     <ion-content class="homebg" >
+
+
+<!--slider-->
+
+<ion-grid>
+<!-- ion Slider of images -->
+<ion-card class="slider">
+    <ion-slides autoplay="3000" pager>
+     <ion-slide *ngFor="let number of [1,2,3,4]">
+    <img src="./assets/images/{{number}}.jpg" />
+            
+</ion-slide>
+   
+  </ion-slides>
+    </ion-card>
+  </ion-grid>
+     
+  
+
+   
+ 
+   <!-- Grid of Programs from features array-->
+ <ion-content class="home-content">
+    <ion-list class="purple-list" >
+        <button ion-item  *ngFor="let feature of features"(click)="goPage()">
+          <ion-thumbnail item-start>
+            <img [src]="feature.image">
+          </ion-thumbnail>
+          <h2>{{feature.title}}</h2>
+        </button>
+      </ion-list>
+     
+       
+  
+ 
+ 
+ </ion-content>

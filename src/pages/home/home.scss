@@ -1,0 +1,39 @@
+
+
+
+page-home {
+
+/*Purple home background*/
+.homebg{
+background: #494784;
+}
+
+
+/*Slider*/
+
+ion-card.slider{
+    
+margin:0!important;
+ width:100%!important;
+}
+
+.home-content{
+ background-color:#69679F;
+}
+
+/*List Container*/
+
+button.item.item-block.item-ios {
+    background-color:#69679F!important;
+}
+
+/*List Items color*/
+.item-ios h2 {
+color:white;
+font-family: 'Rancho', cursive;
+font-size:28px;
+}
+
+
+
+}

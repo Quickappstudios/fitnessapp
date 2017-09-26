@@ -1,0 +1,126 @@
+<!--
+  Classes
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title >Gym Classes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+
+<ion-content fullScreen >
+
+  <!--ion-refresher refresh the content-->
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="bubbles" refreshingText="Refreshing...">
+      </ion-refresher-content>
+    </ion-refresher>
+
+
+  <!--segmented tabs-->
+    <ion-segment  class="SwipedTabs-tabs"  >
+      <ion-segment-button *ngFor='let tab of tabs ; let i = index ' value="IngoreMe" (click)="selectTab(i)" 
+      [ngClass]='{ "SwipedTabs-activeTab" : ( this.SwipedTabsSlider  && ( this.SwipedTabsSlider.getActiveIndex() === i || (  tabs.length -1 === i&& this.SwipedTabsSlider.isEnd()))) }' > 
+        {{tab}}  
+      </ion-segment-button>
+    </ion-segment>
+  
+    <!-- here is our dynamic line  "indicator"-->
+    <div id='indicator' class="SwipedTabs-indicatorSegment" [ngStyle]="{'width.%': (100/this.tabs.length)}"></div>
+  
+    <ion-slides #SwipedTabsSlider  (ionSlideDrag)="animateIndicator($event)"
+                (ionSlideWillChange)="updateIndicatorPosition()" 
+                (ionSlideDidChange)="updateIndicatorPosition()" 
+                (pan)="updateIndicatorPosition()"
+               [pager]="false">
+      
+      
+      <!--Class weekly-->
+
+
+
+      <!--class Sunday No Classes-->
+         <ion-slide class="  class-bg">
+
+            <ion-icon class="no-class" ios="ios-calendar" md="md-calendar"></ion-icon>
+            
+            <h2>No Classes Today</h2>
+            <p>Either there are no classes scheduled today or your internet connection is not working.</p>
+            <p> Pull Down to try Again</p>
+           
+             </ion-slide>
+
+
+
+              <!--class Monday-->
+         <ion-slide class="monday">
+          
+            <ion-card class="class-card" *ngFor="let item of items" (click)="selectedItem(item)">
+                <img class="class-img" src= "{{item.image}}" />
+                <h2 class="card-title">{{item.title}}</h2>
+                <p class="card-subtitle">{{item.time}}</p>
+              </ion-card>
+            
+             </ion-slide>
+
+
+                <!--class Wednesday-->
+         <ion-slide>
+            <ion-card *ngFor="let item of items" (click)="selectedItem(item)">
+                <h2>{{item.title}}</h2>
+                <p>{{item.time}}</p>
+              </ion-card>
+           
+             </ion-slide>
+
+
+
+                <!--class Thursday-->
+         <ion-slide>
+            <ion-card *ngFor="let item of items" (click)="selectedItem(item)">
+                <h2>{{item.title}}</h2>
+                <p>{{item.time}}</p>
+              </ion-card>
+           
+             </ion-slide>
+
+
+
+                <!--class Friday-->
+         <ion-slide>
+            <ion-card *ngFor="let item of items" (click)="selectedItem(item)">
+                <h2>{{item.title}}</h2>
+                <p>{{item.time}}</p>
+                <p>{{item.duration}}</p>
+              </ion-card>
+           
+             </ion-slide>
+
+
+
+                <!--class Sat-->
+         <ion-slide>
+            <ion-card *ngFor="let item of items" (click)="selectedItem(item)">
+                <h2>{{item.title}}</h2>
+                <p>{{item.time}}</p>
+              </ion-card>
+           
+             </ion-slide>
+
+
+
+         
+      
+      
+     
+
+    
+ </ion-slides>
+  
+  
+  </ion-content>
+  
